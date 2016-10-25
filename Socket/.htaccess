@@ -1,0 +1,25 @@
+Options -Indexes 
+Options +FollowSymLinks
+
+RewriteEngine On
+
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_URI} !(.*)/$
+ RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI}/ [QSA,L]
+
+DirectoryIndex main.php
+
+#RewriteCond %{REQUEST_URI} ^/administrator(.+)$
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-l
+#RewriteRule ^(.+)$ administrator/main.php?route=$1 [QSA,L]
+
+RewriteCond %{REQUEST_URI} !\.(ico|jpg|png|img|css|js)$
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule (.*) main.php?route=$1
+
+AddDefaultCharset utf-8
+

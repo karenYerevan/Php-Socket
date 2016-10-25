@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+.content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.bord {
+    height: 150px;
+    background: #1d3c39;
+    color: #fff;
+}
+.my_input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+#text {
+    margin-top: 20px;
+    min-height: 180px;
+    resize: none;
+}
+#send {
+    margin-top: 5px;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
+    display: none;
+}
+.main_mess {
+    text-align: left;
+}
